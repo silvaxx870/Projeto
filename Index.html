@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MusicArea</title>
+  
+  <link rel="stylesheet" href="Style.css">
+  
+</head>
+<body
+
+
+  <header class="topo">
+    <a class="logo" href="#" data-page="inicio">♫ Music<span>Area</span></a>
+    <input id="pesquisa" type="search" placeholder="Buscar músicas ou artistas...">
+    <button class="icone" id="abrir-favoritos" aria-label="Favoritos">♡</button>
+  </header>
+
+  <nav class="menu">
+    <button class="nav-btn ativo" data-page="inicio">⌂ Início</button>
+    <button class="nav-btn" data-page="explorar">⌕ Explorar</button>
+    <button class="nav-btn" data-page="biblioteca">▣ Biblioteca</button>
+    <button class="nav-btn" data-page="favoritos">♡ Favoritos</button>
+  </nav>
+
+  <main>
+    <section class="hero" id="inicio">
+      <span class="etiqueta">SEU SOM. SEU MUNDO.</span>
+      <h1>A música certa<br>muda <span>tudo.</span></h1>
+      <p>Descubra seu próximo som favorito.</p>
+      <button class="botao-verde" id="ouvir-destaque">▶ Ouvir música</button>
+      <div class="decoracao">♫</div>
+    </section>
+
+    <section class="secao" id="secao-destaques">
+      <div class="titulo-linha">
+        <h2>Feito para você</h2>
+        <span class="subtitulo">SELEÇÃO MUSICZONE</span>
+      </div>
+      <div class="cards" id="destaques"></div>
+    </section>
+
+    <section class="secao" id="secao-generos">
+      <h2>Explore os gêneros</h2>
+      <div class="generos">
+        <button data-genero="Trap">🎧 Trap</button>
+        <button data-genero="Pop">✨ Pop</button>
+        <button data-genero="Rock">🎸 Rock</button>
+        <button data-genero="Eletrônica">⚡ Eletrônica</button>
+        <button data-genero="Hip Hop">🎤 Hip Hop</button>
+      </div>
+    </section>
+
+    <section class="secao" id="secao-musicas">
+      <div class="titulo-linha">
+        <h2 id="titulo-lista">Mais ouvidas</h2>
+        <span class="subtitulo" id="contador"></span>
+      </div>
+      <div class="lista" id="lista-musicas"></div>
+      <p class="vazio" id="vazio" hidden>Nenhuma música encontrada.</p>
+    </section>
+
+    <section class="secao" id="secao-playlists">
+      <h2>Playlists em destaque</h2>
+      <div class="cards playlists">
+        <button class="playlist" data-genero="Trap">
+          <span class="arte arte1">TRAP<br>VIBES</span>
+          <strong>Trap Vibes</strong>
+          <small>Batidas e energia</small>
+        </button>
+        <button class="playlist" data-genero="Pop">
+          <span class="arte arte2">POP<br>HITS</span>
+          <strong>Pop Hits</strong>
+          <small>Seus sons favoritos</small>
+        </button>
+        <button class="playlist" data-genero="Rock">
+          <span class="arte arte3">ROCK<br>MODE</span>
+          <strong>Rock Mode</strong>
+          <small>Som no máximo</small>
+        </button>
+        <button class="playlist" data-genero="Eletrônica">
+          <span class="arte arte4">NIGHT<br>DRIVE</span>
+          <strong>Night Drive</strong>
+          <small>Para ouvir à noite</small>
+        </button>
+      </div>
+    </section>
+
+    <section class="secao">
+      <h2>Sobre o MusicZone</h2>
+      <p class="sobre">Seu espaço para descobrir sons, explorar gêneros e montar sua própria coleção musical.</p>
+    </section>
+  </main>
+
+  <footer class="player">
+    <div class="faixa-info">
+      <div class="mini-capa" id="mini-capa">♫</div>
+      <div class="faixa-texto">
+        <strong id="nome-atual">Escolha uma música</strong>
+        <small id="artista-atual">MusicZone</small>
+      </div>
+      <button class="icone" id="favoritar-atual" aria-label="Favoritar música">♡</button>
+    </div>
+
+    <div class="controles">
+      <div class="botoes-player">
+        <button id="anterior" aria-label="Música anterior">|◀</button>
+        <button class="play" id="play-pause" aria-label="Tocar ou pausar">▶</button>
+        <button id="proxima" aria-label="Próxima música">▶|</button>
+      </div>
+      <div class="progresso-linha">
+        <span id="tempo-atual">0:00</span>
+        <input id="progresso" type="range" min="0" max="100" value="0" aria-label="Progresso da música">
+        <span id="duracao">0:00</span>
+      </div>
+      <div class="volume-linha">
+        <span>🔊</span>
+        <input id="volume" type="range" min="0" max="1" step="0.05" value="0.8" aria-label="Volume">
+      </div>
+    </div>
+    <audio id="audio" preload="none"></audio>
+    <p id="aviso" role="status"></p>
+  </footer>
+
+  <script src="Script.js"></script>
+</>
+</html>
+
+  
+  <script src="Script.js"></script>
+</body>
+</html>
